@@ -232,7 +232,7 @@ Individual_Analysis <- function(chr,start_loc=NULL,end_loc=NULL,individual_resul
 				pvalue <- Individual_Score_Test_SPA(Geno_common,XW,XXWX_inv,residuals.phenotype,muhat,tol,max_iter)
 
 				results_temp <- data.frame(CHR=CHR_common,POS=position_common,REF=REF_common,ALT=ALT_common,ALT_AF=ALT_AF_common,MAF=MAF_common,N=N_common,
-				                           pvalue=pvalue)
+				                           pvalue=pvalue,Est=Score_test$Est,Est_se=Score_test$Est_se)
 
 				results <- rbind(results,results_temp)
 			}
